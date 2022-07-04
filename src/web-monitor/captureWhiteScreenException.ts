@@ -2,7 +2,7 @@
 // http://172.28.84.202:8888/%E6%9F%A5%E5%85%AC%E5%8F%B8264514c008f730a6.png
 // Application error: a client-side exception has occurred (see the browser console for more information).
 
-import multiTry from './multiTry.js';
+import multiTry from './multiTry';
 import reportSentry from './reportSentry';
 
 const ERROR_KEYWORDS = 'Application error: a client-side exception has occurred';

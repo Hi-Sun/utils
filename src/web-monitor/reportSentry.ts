@@ -9,7 +9,7 @@ import {
   isObjectLike,
   isPlainObject,
   isString,
-} from '../typeof';
+} from '../common-func/typeof';
 
 const MSG_PREFIX = '® ';
 const MEDIA_ERROR_NAMES = [
