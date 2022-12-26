@@ -52,9 +52,9 @@ function isNumber(value: any): boolean {
   );
 }
 
-// function isNaN(value: any): boolean {
-//   return isNumber(value) && value !== +value;
-// }
+function isNaN(value: any): boolean {
+  return isNumber(value) && value !== +value;
+}
 
 function isBigInt(value: any): boolean {
   // eslint-disable-next-line
@@ -99,18 +99,18 @@ function isArray(value: any): boolean {
   return Array.isArray(value);
 }
 
-// function isArrayLike(value: any): boolean {
-//   return value != null && isLength(value.length) && !isFunction(value);
-// }
+function isArrayLike(value: any): boolean {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
 
 // 有长度的数组
 function isLengthArray(value: any): boolean {
   return isArray(value) && value.length;
 }
 
-// function isLength(value: any): boolean {
-//   return typeof value === 'number' && value > -1 && value % 1 === 0 && value <= MAX_SAFE_INTEGER;
-// }
+function isLength(value: any): boolean {
+  return typeof value === 'number' && value > -1 && value % 1 === 0 && value <= Number.MAX_VALUE;
+}
 
 function isFunction(value: any): boolean {
   // return typeof value === 'function';
@@ -205,6 +205,7 @@ export {
   isUndefined,
   isBoolean,
   isNumber,
+  isNaN,
   isBigInt,
   isString,
   isSymbol,
@@ -213,7 +214,7 @@ export {
   isObjectLike,
   isPlainObject,
   isArray,
-  // isArrayLike,
+  isArrayLike,
   isLengthArray,
   isFunction,
   isThenable,
